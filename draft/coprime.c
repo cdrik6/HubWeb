@@ -48,3 +48,5 @@ int main()
 
 //     return 0;
 // }
+
+//  puts(toto==1?"a":"b");
