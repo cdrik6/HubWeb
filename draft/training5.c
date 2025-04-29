@@ -64,40 +64,62 @@ int fact(int n)
 //         printf("%d\n", atoi(a) - atoi(b));
 // }
 
-// output the n-1 number
-//  2, 4, 8, 24 --> 8
-
-int main()
-{
-    char S[101];
-    scanf("%[^\n]", S); 
-    
-    char R[101];
-    strcpy(R, S);
-    int n = 0;
-    char *tok = strtok(S, ",");
-    while (tok)
-    {
-        n++; //printf("%s ", tok);
-        tok = strtok(NULL, ",");
-    }
-    char *tk = strtok(R, ", ");
-    int k = 0;
-    while (k < n-2)
-    {
-        k++;
-        tk = strtok(NULL, ", ");
-    }
-    printf("%s\n", tk);
-}
+// // output the n-1 number
+// //  2, 4, 8, 24 --> 8
 
 // int main()
 // {
 //     char S[101];
-//     scanf("%[^\n]", S);        
-//     char *r[101];
-//     // int n = strlen(S);
-//     int i = 0;
+//     scanf("%[^\n]", S); 
+    
+//     char R[101];
+//     strcpy(R, S);
+//     int n = 0;
+//     char *tok = strtok(S, ",");
+//     while (tok)
+//     {
+//         n++; //printf("%s ", tok);
+//         tok = strtok(NULL, ",");
+//     }
+//     char *tk = strtok(R, ", ");
+//     int k = 0;
+//     while (k < n-2)
+//     {
+//         k++;
+//         tk = strtok(NULL, ", ");
+//     }
+//     printf("%s\n", tk);
+// }
+
+// int main()
+// {
+//     char S[101];
+//     scanf("%[// output the n-1 number
+// //  2, 4, 8, 24 --> 8
+
+// int main()
+// {
+//     char S[101];
+//     scanf("%[^\n]", S); 
+    
+//     char R[101];
+//     strcpy(R, S);
+//     int n = 0;
+//     char *tok = strtok(S, ",");
+//     while (tok)
+//     {
+//         n++; //printf("%s ", tok);
+//         tok = strtok(NULL, ",");
+//     }
+//     char *tk = strtok(R, ", ");
+//     int k = 0;
+//     while (k < n-2)
+//     {
+//         k++;
+//         tk = strtok(NULL, ", ");
+//     }
+//     printf("%s\n", tk);
+// }0;
 //     char *tok = strtok(S, ", ");
 //     while (tok)
 //     {
@@ -108,3 +130,80 @@ int main()
 //     if (i-2 >= 0)
 //     printf("%s\n", r[i-2]);    
 // }    
+
+int isprime(int n)
+{
+    if (n == 2 || n == 3 || n == 5 || n == 7)
+        return (1);
+    if (n%2 == 0 || n%3 == 0 || n%5 == 0 || n%7 == 0)
+        return (0);
+    for (int p = 11; p*p <= n && p < 46340; p++)
+    {
+        if (n%p == 0)
+            return (0);
+    }
+    return (1);
+}
+
+// // macro
+// int main(void)
+// {
+//     int n;
+//     scanf("%d", &n);
+
+    
+//     (n>3?puts("oui"):puts("non"));
+// bubble.c small to big
+// int main()
+// {
+//     int n;
+// 	scanf("%d", &n);
+
+// 	int v[99];
+// 	for (int i = 0; i < n; i++)	
+// 		scanf("%d", &v[i]);
+
+//     for (int i = 0; i < n; i++)
+//     {
+        
+//         for (int j = i+1; j < n; j++)
+//         {
+//             if (v[i] > v[j])
+//             {
+//                 int tmp = v[i];
+//                 v[i] = v[j];
+//                 v[j] = tmp;
+//             }
+//         }
+//     }
+//     for (int i = 0; i < n; i++)	
+// 		printf("%d", v[i]);
+// }
+// }
+
+// // bubble.c small to big
+// int main()
+// {
+//     int n;
+// 	scanf("%d", &n);
+
+// 	int v[99];
+// 	for (int i = 0; i < n; i++)	
+// 		scanf("%d", &v[i]);
+
+//     for (int i = 0; i < n; i++)
+//     {
+        
+//         for (int j = i+1; j < n; j++)
+//         {
+//             if (v[i] > v[j])
+//             {
+//                 int tmp = v[i];
+//                 v[i] = v[j];
+//                 v[j] = tmp;
+//             }
+//         }
+//     }
+//     for (int i = 0; i < n; i++)	
+// 		printf("%d", v[i]);
+// }
