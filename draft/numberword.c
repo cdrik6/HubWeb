@@ -6,7 +6,7 @@
 /*   By: caguillo <caguillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 00:38:24 by caguillo          #+#    #+#             */
-/*   Updated: 2025/05/06 01:00:41 by caguillo         ###   ########.fr       */
+/*   Updated: 2025/05/09 04:54:29 by caguillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 int main()
 {
     char l[10][100] = {"Zero","One","Two","Three","Four","Five","Six","Seven","Height","Nine"};
-    char str[2];
+    char str[2] = {0};
 	//
     char d[61];
     scanf("%[^\n]", d);
@@ -29,8 +29,10 @@ int main()
         k = 1;
 		for (int j = i; j < strlen(d); j++)
 		{
-			if (d[j+1] == d[j])
-				 k++;			
+			if (d[j+1] == d[j])            
+               k++;
+            else   
+               break;            
 		}
         sprintf(str, "%c", d[i]);
         if (i == 0)
@@ -56,6 +58,6 @@ int main()
 			}
         } 
     }
-	
+	printf("\n");
     return 0;
 }
