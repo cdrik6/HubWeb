@@ -6,7 +6,7 @@
 /*   By: caguillo <caguillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/12 23:15:20 by caguillo          #+#    #+#             */
-/*   Updated: 2025/05/13 00:33:20 by caguillo         ###   ########.fr       */
+/*   Updated: 2025/05/23 01:16:10 by caguillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@
 //         if (atoi(str)==m)
 //         {            
 //             a[i] = a[2*m]; 
-// 			a[2*m] = m + 48;           
+// 			   a[2*m] = m + 48;           
 //             return(printf("%s\n", a));
 //         }
 //     }    
@@ -68,25 +68,53 @@
 //     return 0;
 // }
 
+// int main()
+// {
+//     int n;
+//     scanf("%d", &n); fgetc(stdin);
+//     char a[101];
+//     scanf("%[^\n]", a);
+//     int m;
+//     scanf("%d", &m);
+//     if (m >= n)
+//         return(puts("OUT OF RANGE")); 
+// 	char *tok = strtok(a," ");	
+// 	char *b[n];
+// 	int i = 0;
+// 	while (tok)	
+// 	{
+// 		b[i] = tok;
+// 		i++;			
+// 		tok = strtok(NULL," ");	
+// 	}    
+//     puts("NOT IN LIST");
+//     return 0;
+// }
+
 int main()
 {
     int n;
-    scanf("%d", &n); fgetc(stdin);
-    char a[101];
-    scanf("%[^\n]", a);
+    scanf("%d", &n); fgetc(stdin);    
+    int k[99];
+    for (int i = 0; i < n; i++)        
+        scanf("%d", &k[i]);        
     int m;
     scanf("%d", &m);
     if (m >= n)
         return(puts("OUT OF RANGE")); 
-	char *tok = strtok(a," ");	
-	char *b[n];
-	int i = 0;
-	while (tok)	
-	{
-		b[i] = tok;
-		i++;			
-		tok = strtok(NULL," ");	
-	}    
-    puts("NOT IN LIST");
-    return 0;
+    int l = 0;
+    for (int i = 0; i < n; i++)
+    {
+        if (k[i] == m)
+        {
+            k[i] = k[m];
+            k[m] = m;
+            l = 1;   
+        }                              
+    }
+    if (l == 0)    	
+        return(puts("NOT IN LIST"));
+    printf("%d", k[0]);    
+    for (int i = 1; i < n; i++)
+        printf(" %d", k[i]);    
 }
