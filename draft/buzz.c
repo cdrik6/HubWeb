@@ -210,3 +210,5 @@ int main()
 		printf("%s\n", str);	
     return 0;
 }
+
+// N;t;i;j;main(){scanf("%d",&N);int x[N];for(i=0;i<N;i++){scanf("%d",&x[i]);x[i]*=x[i];}for(i=0;i<N;i++){for(j=0;j<N;j++){if(x[i]<x[j]){t=x[i];x[i]=x[j];x[j]=t;}}}printf("%d",x[0]);for(i=1;i<N;i++){if(x[i]!=x[i-1])printf(" %d",x[i]);}}
