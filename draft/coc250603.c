@@ -6,7 +6,7 @@
 /*   By: caguillo <caguillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 00:36:42 by caguillo          #+#    #+#             */
-/*   Updated: 2025/06/13 03:47:42 by caguillo         ###   ########.fr       */
+/*   Updated: 2025/06/13 23:32:33 by caguillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -292,15 +292,6 @@
 
 
 
-
-
-// shortest 
-// Cleaning code length By CCCStudioGame 
-// https://www.codingame.com/contribute/view/122643ab3830e735cca09722dde2685d06e885
-
-// rRyoTa 314 size
-// #include<stdio.h>
-// l,r,i,j,k;char s[257];main(){scanf("%d",&l);fgetc(stdin);for(i=0;i<l;i++){fgets(s,257,stdin);k=strlen(s);if(k>0&&s[k-1]=='\n')s[--k]=0;j=0;while(j<k&&s[j]==' ')j++;if(j<k-1&&s[j]=='/'&&s[j+1]=='/'){r+=k;continue;}r+=j;j=k-1;while(j>=0&&s[j]==' ')j--,r++;if(j>=0&&s[j]==';')r++;}printf("%d\n",r);}
 
 
 // reverse
