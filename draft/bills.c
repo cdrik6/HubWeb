@@ -6,7 +6,7 @@
 /*   By: caguillo <caguillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 01:31:38 by caguillo          #+#    #+#             */
-/*   Updated: 2025/06/04 01:47:48 by caguillo         ###   ########.fr       */
+/*   Updated: 2025/06/13 03:44:53 by caguillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,3 +65,40 @@ int main()
 
     return 0;
 }
+
+
+// int main()
+// {
+//     char s[27];
+//     scanf("%[^\n]", s);
+//     int n;
+//     scanf("%d", &n);
+    
+//     int b[30];
+//     char *tok = strtok(s, " ");
+//     int i = 0;
+//     while (tok)
+//     {
+//         b[i] = atoi(tok);
+//         i++; 
+//         tok = strtok(NULL, " ");
+//     }
+//     int r = 0;
+//     int p = 0;
+//     for (int j = i - 1; j >= 0; j--)
+//     {
+//         r = n / b[j];
+//         if (r != 0)
+//         {
+//             if (p == 0)
+//             {
+//                 printf("%dx%d", r, b[j]);
+//                 p++;
+//             }
+//             else 
+//                 printf(" %dx%d", r, b[j]);
+//             n = n - r * b[j];
+//         }        
+//     }    
+//     return 0;
+// }
