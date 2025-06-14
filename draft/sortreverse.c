@@ -1,14 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   coc250603.c                                        :+:      :+:    :+:   */
+/*   sortreverse.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: caguillo <caguillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/04 00:36:42 by caguillo          #+#    #+#             */
-/*   Updated: 2025/06/14 03:06:23 by caguillo         ###   ########.fr       */
+/*   Created: 2025/06/14 22:44:09 by caguillo          #+#    #+#             */
+/*   Updated: 2025/06/14 23:47:46 by caguillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// shortest
+// Trouble with FizzBuzz By User123 
+// https://www.codingame.com/contribute/view/123930058477373f4030bd24af65ddd402d7a6
+
+// int main(){int N;scanf("%d", &N);printf("%d",N-N/3-N/5+N/15);}
+
+// moi ok mais
+// k;j;main(n){scanf("%d",&n);for(j;j<=n;j++){if(j%3!=0&&j%5!=0)k++;}printf("%d",k);}
+
+/**** ici  */
 
 // Sort the words reverse-wise By StepBack13 
 //https://www.codingame.com/contribute/view/12175206a039a13c2ddf35b8741224b48b51dd
@@ -172,134 +183,51 @@
 // }
 
 
-// False Fibonacci? By volumeoverheight 
-// https://www.codingame.com/contribute/view/122346426f2d4557d821e3f6692b28b128b066
 
-// // moi
-// #include <stdlib.h>
-// #include <stdio.h>
-// #include <string.h>
-// #include <stdbool.h>
 
-// /**
-//  * Auto-generated code below aims at helping you parse
-//  * the standard input according to the problem statement.
-//  **/
-// int f(int n)
-// {
-//     if (n == 0)
-//         return (1);
-//     if (n == 1)
-//         return (1);
-//     int a = 1;
-//     int b = 1;
-//     int r;
-//     for (int i = 2; i <=n; i++)
-//     {
-//         r = a + b;
-//         a = b;
-//         b = r;
-//     }
-//     return (r);
-// }
 
-// int main()
-// {
-//     int length;
-//     scanf("%d", &length);
-//     int t = 0;
-//     for (int i = 0; i < length; i++) {
-//         int x;
-//         scanf("%d", &x);
-//         // printf("%d", x);
-//         t = 0;        
-//         if (x == 0)
-//             t = 1;
-//         for (int k = 0; k <= 15; k++)
-//         {
-//             if ( x == f(k))
-//                 t = 1;              
-//         }
-//         if (t == 0)
-//             return (printf("%d", x));        
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
 
-//     }
-//     printf("fib");
+char *f(char *str)
+{
+    char *rev;
+    rev = malloc(sizeof(char)*(strlen(str) + 1));        
+	for (size_t i = 0; i < strlen(str); i++)	
+		rev[i] = str[strlen(str) - 1 - i];		
+    rev[strlen(str)] = 0;
+    // printf("%s\n", rev);
+    return (rev);
+}
+
+int comp(const void *s1, const void *s2)
+{
+    // return (strcmp(s1,s2));
+    return (strcmp(*(char **)s1,*(char **)s2));
+}
+
+int main()
+{
+    int n;
+    scanf("%d", &n); fgetc(stdin);
+    char *m[n];
+    for (int i = 0; i < n; i++) {
+        char w[16];
+        scanf("%[^\n]",w); fgetc(stdin);
+        m[i] = f(w);        
+    }
+    // arr, size arr, sizeof 1 element, comp function
+	qsort (m, n, sizeof(char *), comp);
     
-
-    
-
-//     return 0;
-// }
-
-// // rRyoTa
-// #include <stdio.h>
-
-// int main()
-// {
-//     int length;
-//     scanf("%d", &length);
-//     int numbers[10];
-//     for (int i = 0; i < length; i++)
-//         scanf("%d", &numbers[i]);
-//     for (int i = 2; i < length; i++)
-//     {
-//         if (numbers[i] != numbers[i-1] + numbers[i-2])
-//         {
-//             printf("%d\n", numbers[i]);
-//             return 0;
-//         }
-//     }
-//     printf("fib\n");
-    
-//     return 0;
-// }
-
-// // james Garrigou
-// #include <stdlib.h>
-// #include <stdio.h>
-// #include <string.h>
-// #include <stdbool.h>
-
-// /**
-//  * Auto-generated code below aims at helping you parse
-//  * the standard input according to the problem statement.
-//  **/
-
-// int main()
-// {
-//     int length;
-//     scanf("%d", &length);
-//     int x;
-//     int j;
-//     int k;
-//     scanf("%d%d", &j, &k);
-//     for (int i = 2; i < length; i++) {
-//         scanf("%d", &x);
-//         if (x != k + j)
-//             return (printf("%d\n", x), 0);
-//         k += j;
-//         j = k - j;
-//     }
-
-//     // Write an answer using printf(). DON'T FORGET THE TRAILING \n
-//     // To debug: fprintf(stderr, "Debug messages...\n");
-//     printf("fib\n");
-
-//     return 0;
-// }
-
-
-
-
-
-
-
-// shortest
-// Trouble with FizzBuzz By User123 
-// https://www.codingame.com/contribute/view/123930058477373f4030bd24af65ddd402d7a6
-
-// int main(){int N;scanf("%d", &N);printf("%d",N-N/3-N/5+N/15);}
-
-// moi ok mais
-// k;j;main(n){scanf("%d",&n);for(j;j<=n;j++){if(j%3!=0&&j%5!=0)k++;}printf("%d",k);}
+	char *r[n];
+    for (int i = 0; i < n; i++) {
+		r[i] = f(m[i]);
+        // printf("%s\n", f(m[i]));
+		printf("%s\n", r[i]);
+		free(m[i]);
+		free(r[i]);
+    }
+    return 0;
+}
