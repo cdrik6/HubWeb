@@ -6,7 +6,7 @@
 /*   By: caguillo <caguillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/22 22:32:24 by caguillo          #+#    #+#             */
-/*   Updated: 2025/06/22 23:12:06 by caguillo         ###   ########.fr       */
+/*   Updated: 2025/06/25 00:32:08 by caguillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,6 +97,54 @@
 //     }
 
 //     printf("%s", sentence);
+
+//     return 0;
+// }
+
+// // orio
+// #include <stdlib.h>
+// #include <stdio.h>
+// #include <string.h>
+// #include <stdbool.h>
+// #include <math.h>
+// /**
+//  * Auto-generated code below aims at helping you parse
+//  * the standard input according to the problem statement.
+//  **/
+
+// int strncmpi(const char *s1, const char *s2, size_t i) {
+//    // printf("%.*s %.*s\n", i, s1, i, s2);
+//     while (i--) {
+//         if (tolower(*s1++) != tolower(*s2++))
+//             return 0;
+//     }
+    
+//     return 1;
+// }
+
+// void replace(char* s1, char*s2, int len) {
+//     while(len--) {
+//         *s1 = toupper(*s2);
+//         s1++;
+//         s2++;
+//     }
+// }
+
+// int main()
+// {
+//     char keyword[101];
+//     scanf("%[^\n]", keyword); fgetc(stdin);
+//     char sentence[501];
+//     scanf("%[^\n]", sentence);
+//     for (int i = 0; i < strlen(sentence) - strlen(keyword) + 1; i++) {
+//         if (strncmpi(sentence+i, keyword, strlen(keyword))) {
+//             replace(sentence+i, keyword, strlen(keyword));
+//         }
+//     }
+
+//     // Write an answer using printf(). DON'T FORGET THE TRAILING \n
+//     // To debug: fprintf(stderr, "Debug messages...\n");
+//     printf("%s\n", sentence);
 
 //     return 0;
 // }

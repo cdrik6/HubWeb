@@ -6,7 +6,7 @@
 /*   By: caguillo <caguillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/17 21:33:15 by caguillo          #+#    #+#             */
-/*   Updated: 2025/06/22 22:32:18 by caguillo         ###   ########.fr       */
+/*   Updated: 2025/06/25 01:32:47 by caguillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -252,15 +252,25 @@
 
 // // shortest
 // // https://www.codingame.com/contribute/view/123072713c34e3dd13ffc1d681112cc3cee0ee
-
 // // moi
 // c;i;k;main(){char s[27];scanf("%[^\n]",s);c=s[0];for(i=1;i<strlen(s);i++){if(s[i]=='*')k+=c+1;c++;}printf("%d",k);}
-
 // // leo
 // r;l;main(c){for(;c=getchar()+1;)c--<65&&(r+=c=l+1),l=c;printf("%d",r);}
-
 // //kholl
 // main(){char s[27],c,i=1;gets(s);int n=0;c=*s;while(s[i])n+=(s[i++]==++c?0:c);printf("%i",n);}
+// ***********************************  tips  *******************
+// s[0] --> *s
+// for + strlen --> while
+// char s[27];scanf("%[^\n]",s); --> char s[27],c,i=1;gets(s);
+// while(s[i]) {} --> macro
+// k+=(s[i++]=='*'?c+1:0) --> k+=(s[i++]==++c?0:c) //--> add and incremente same time !
+// , !!!!! -->
+// n;k;int main()
+// {
+//     for(int i=0; i<3; i++)
+//         n++,printf("%d\n",n),k++,printf("%d\n",k);    
+// }
+// ***********************************  tips  *******************
 
 
 // // https://www.codingame.com/contribute/view/4260b86c31459b995a6e1808393b75c3c363
@@ -423,50 +433,3 @@
 
 
 
-// // orio
-// #include <stdlib.h>
-// #include <stdio.h>
-// #include <string.h>
-// #include <stdbool.h>
-// #include <math.h>
-// /**
-//  * Auto-generated code below aims at helping you parse
-//  * the standard input according to the problem statement.
-//  **/
-
-// int strncmpi(const char *s1, const char *s2, size_t i) {
-//    // printf("%.*s %.*s\n", i, s1, i, s2);
-//     while (i--) {
-//         if (tolower(*s1++) != tolower(*s2++))
-//             return 0;
-//     }
-    
-//     return 1;
-// }
-
-// void replace(char* s1, char*s2, int len) {
-//     while(len--) {
-//         *s1 = toupper(*s2);
-//         s1++;
-//         s2++;
-//     }
-// }
-
-// int main()
-// {
-//     char keyword[101];
-//     scanf("%[^\n]", keyword); fgetc(stdin);
-//     char sentence[501];
-//     scanf("%[^\n]", sentence);
-//     for (int i = 0; i < strlen(sentence) - strlen(keyword) + 1; i++) {
-//         if (strncmpi(sentence+i, keyword, strlen(keyword))) {
-//             replace(sentence+i, keyword, strlen(keyword));
-//         }
-//     }
-
-//     // Write an answer using printf(). DON'T FORGET THE TRAILING \n
-//     // To debug: fprintf(stderr, "Debug messages...\n");
-//     printf("%s\n", sentence);
-
-//     return 0;
-// }
