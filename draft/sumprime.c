@@ -6,9 +6,11 @@
 /*   By: caguillo <caguillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/17 04:08:14 by caguillo          #+#    #+#             */
-/*   Updated: 2025/06/17 04:23:04 by caguillo         ###   ########.fr       */
+/*   Updated: 2025/07/15 01:24:21 by caguillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// https://www.codingame.com/contribute/view/674718f404520f533d789b471d02cfea02a2
 
 #include <stdlib.h>
 #include <stdio.h>
