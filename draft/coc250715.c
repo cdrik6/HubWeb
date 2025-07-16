@@ -6,12 +6,19 @@
 /*   By: caguillo <caguillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 22:45:39 by caguillo          #+#    #+#             */
-/*   Updated: 2025/07/15 23:37:53 by caguillo         ###   ########.fr       */
+/*   Updated: 2025/07/16 02:02:59 by caguillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // training G S B 
 // https://www.codingame.com/ide/demo/725972bcca262e1b13f73a35db519e2453e6a1
+
+/*
+--> passer tout en B
+--> si negatif lire le texte
+--> strtok modifie la string d'origine, on ne peut pus s'en servir bordel
+--> confusion entre reste et diviseur encore
+*/
 
 // enough space -- shortest
 // https://www.codingame.com/contribute/view/68826edf2bb31ff943486897ecb632447222a
@@ -23,9 +30,35 @@
 // tamtam
 // w=1;main(l){char s[999],*p=s,*q=s;scanf("%d\n",&l);gets(s);while(*p){for(;*p&&*p!=32;p++);if(p-s<=l)q=p;else break;if(*p)p++;}*q=0;for(p=s;*p;p++)if(*p==32)w++;printf("%s\n%d words\n%d characters long",s,w,strlen(s));}
 
+/*
+--> shortest:
+--> put together scanf: int l;char q[301];scanf("%d\n%[^\n]",&l,q);
+--> strtok en for: for(char *t=strtok(q," ");t;t=strtok(0," "))
+*/
+
 
 // dec to binary -- shortest
 // https://www.codingame.com/contribute/view/577653a55b06719a3e7020ceaa6e0e28738a7
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    char b[33];    
+    int i = 0;
+    while (n >0)
+    {
+        if (n%2 == 0)
+            b[i] = '0';
+        else
+            b[i] = '1';
+        n = n/2;           
+        i++;
+    }
+    b[i+1] = 0;    
+    char *end;
+    printf("%ld\n", strtol(b, &end, 2));
+}
+// i;main(n){scanf("%d",&n);char b[33];while(n>0){b[i]=n%2==0?'0':'1';n=n/2;i++;}char *e;printf("%ld\n",strtol(b,&e,2));}
 
 // Nabil
 // main(l){int N,R;scanf("%d",&N);while(N){R=R<<1|N&1;N>>=1;}printf("%d",R);}
