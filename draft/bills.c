@@ -6,7 +6,7 @@
 /*   By: caguillo <caguillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 01:31:38 by caguillo          #+#    #+#             */
-/*   Updated: 2025/06/13 03:44:53 by caguillo         ###   ########.fr       */
+/*   Updated: 2025/09/18 01:44:02 by caguillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,3 +102,29 @@ int main()
 //     }    
 //     return 0;
 // }
+
+// // js
+// const notes = readline();
+// const n = parseInt(readline());
+// let b = notes.split(" ");
+// let r = 0;
+// let t = n;
+// let f = 0;
+// let s = '';
+// for (let i = b.length - 1; i >=0; i--)
+// {
+//     r = Math.trunc(t / b[i]);
+//     if (r)
+//     {
+//         if (f === 0)
+//         {
+//             s = s + r + 'x' + b[i];
+//             f++;
+//         }    
+//         else        
+//             s = s + ' ' + r + 'x' + b[i];
+        
+//     }    
+//     t = t % b[i];
+// }
+// console.log(s);
